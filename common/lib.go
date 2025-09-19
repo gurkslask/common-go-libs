@@ -255,4 +255,6 @@ func GetByteFromBools(b []bool) byte {
 	}
 	return byte(res)
 }
-
+func IntToStr(i int) string {
+	return strconv.Itoa(i)
+}

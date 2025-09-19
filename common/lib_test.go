@@ -175,4 +175,21 @@ func TestIntAbs(t *testing.T) {
 		}
 	}
 }
+// Test IntToStr som returnerar strängen av ett heltal
+func TestIntToStr(t *testing.T) {
+	tests := []struct {
+		input    int
+		expected string
+	}{
+		{5, "5"},
+		{-5, "-5"},
+		{0, "0"},
+	}
 
+	for _, tt := range tests {
+		got := IntToStr(tt.input)
+		if got != tt.expected {
+			t.Errorf("IntAbs(%v) = %v; vill ha %v", tt.input, got, tt.expected)
+		}
+	}
+}
